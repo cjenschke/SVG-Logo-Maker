@@ -4,7 +4,7 @@ const { Triangle, Circle, Square } = require('./library/shapes');
 
 const generateSVG = (text, textColor, shape, shapeColor) => {
     const shapeCode = shape.render();
-  const svgCode = `<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">${shapeCode}fill = "${shapeColor}"<text x="150" y="100" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text></svg>`;
+  const svgCode = `<svg width="300" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg">${shapeCode}fill = "${shapeColor}"<text x="150" y="150" font-size="50" text-anchor="middle" fill="${textColor}">${text}</text></svg>`;
   return svgCode;
 };
 
