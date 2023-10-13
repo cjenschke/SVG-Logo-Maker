@@ -8,3 +8,32 @@ const generateSVG = (text, textColor, shape, shapeColor)=>{
 
     return svgCode;
 }
+
+inquirer
+.prompt ([
+    {
+        type: 'input',
+        name: 'text',
+        message: 'Enter up to three characters:',
+    },
+    {
+        type: 'input',
+        name: 'textColor',
+        message: 'Enter the text color:',
+    },
+    {
+        type: 'list',
+        name: 'shape',
+        message: 'Choose a shape',
+        choices: ['circle', 'triangle', 'square'],
+    },
+    {
+        type: 'input',
+        name: 'shapeColor',
+        message: 'Enter the shape color:',
+    },
+])
+.then ((answers)=>{
+    const svgCode = generateSVG(answers.text,answers.textColor, answers.shape, answers.shapeColor);
+    writeSVGToFile(svgCode);
+});
