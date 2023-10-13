@@ -1,20 +1,20 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const { Triangle, Circle, Square } = require('./library/shapes');
 
 const generateSVG = (text, textColor, shape, shapeColor) => {
   const svgCode = `<svg width='300' height='200'><text x='50%' y='50%' text-anchor='middle' fill='${textColor}'>${text}</text></svg>`;
-
   return svgCode;
 };
 
-const writeSVGToFile = (svgCode)=>{
-    fs.writeFile('logo.svg', svgCode, (err) =>{
-        if (err){
-            console.error('Error writing SVG file:', err);
-        } else {
-            console.log('SVG file generated: logo.svg');
-        }
-    });
+const writeSVGToFile = (svgCode) => {
+  fs.writeFile('logo.svg', svgCode, (err) => {
+    if (err) {
+      console.error('Error writing SVG file:', err);
+    } else {
+      console.log('SVG file generated: logo.svg');
+    }
+  });
 };
 
 inquirer
@@ -42,12 +42,24 @@ inquirer
     },
   ])
   .then((answers) => {
-    const svgCode = generateSVG(
-      answers.text,
-      answers.textColor,
-      answers.shape,
-      answers.shapeColor
-    );
+    const { text, textColor, shape, shapeColor } = answers;
+    let shapeInstance;
+    switch (shape) {
+      case 'circle':
+        shapeInstance = new Circle(shapeColor);
+        break;
+      case 'triangle':
+        shapeInstance = new Triangle(shapeColor);
+        break;
+      case 'square':
+        shapeInstance = new Square(shapeColor);
+        break;
+      default:
+        console.error('Invalid shape');
+        return;
+    }
+
+    const svgCode = generateSVG(text, textColor, shapeInstance.render());
     writeSVGToFile(svgCode);
   })
 
