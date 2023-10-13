@@ -3,7 +3,8 @@ const inquirer = require('inquirer');
 const { Triangle, Circle, Square } = require('./library/shapes');
 
 const generateSVG = (text, textColor, shape, shapeColor) => {
-  const svgCode = `<svg width='300' height='200'><text x='50%' y='50%' text-anchor='middle' fill='${textColor}'>${text}</text></svg>`;
+    const shapeCode = shape.render();
+  const svgCode = `<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">${shapeCode}${shapeColor}<text x="50%" y="50%" text-anchor="middle" fill="${textColor}">${text}</text></svg>`;
   return svgCode;
 };
 
@@ -59,7 +60,7 @@ inquirer
         return;
     }
 
-    const svgCode = generateSVG(text, textColor, shapeInstance.render());
+    const svgCode = generateSVG(text, textColor, shapeInstance, shapeColor);
     writeSVGToFile(svgCode);
   })
 
