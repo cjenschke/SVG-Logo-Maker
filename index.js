@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const { Triangle, Circle, Square } = require('./library/shapes');
 
 const generateSVG = (text, textColor, shape, shapeColor) => {
-    const shapeCode = shape.render();
+  const shapeCode = shape.render();
   const svgCode = `<svg width="300" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg">${shapeCode}fill = "${shapeColor}"<text x="150" y="150" font-size="50" text-anchor="middle" fill="${textColor}">${text}</text></svg>`;
   return svgCode;
 };
@@ -67,3 +67,8 @@ inquirer
   .catch((error) => {
     console.error('Error:', error);
   });
+
+module.exports = {
+  generateSVG,
+  writeSVGToFile,
+};
