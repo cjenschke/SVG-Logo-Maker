@@ -1,1 +1,1 @@
-<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="66" width="200" height="100" fill="VIOLET"/>fill = "VIOLET"<text x="150" y="130" font-size="50" text-anchor="middle" fill="GREEN">SVG</text></svg>
+<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="113" r="80" fill="#FF0000"/>fill = "#FF0000"<text x="150" y="130" font-size="50" text-anchor="middle" fill="YELLOW">SVG</text></svg>
