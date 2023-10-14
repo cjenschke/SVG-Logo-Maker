@@ -15,7 +15,7 @@ class Triangle extends Shape{
 
 class Circle extends Shape{
     render(){
-        return `<circle cx="150" cy="133" r="80" fill="${this.shapeColor}"/>`;
+        return `<circle cx="150" cy="113" r="80" fill="${this.shapeColor}"/>`;
     }
 }
 
