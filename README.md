@@ -24,11 +24,17 @@
   - ```npm install --save-dev jest```
 
   ## Usage
- To use the application, run ```node index.js``` on the command line.  You will then be prompted to answeer quetions in order to produce your SVG logo.
+ To use the application, run ```node index.js``` on the command line.  You will then be prompted to answeer quetions in order to produce your SVG logo.  Click video below for demo of how the generator works.
+  
+ [![Watch the video](https://img.youtube.com/vi/mz9CE4IC_Uk<VIDEO_ID>)](https://youtu.be/mz9CE4IC_Uk<VIDEO_ID>)
+
+
+
 
   ## Credits
   - David Gray GitHub grayd500
   - Xpert Learning Assistant
+  - Bootcamp class
 
   ## License
   [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
