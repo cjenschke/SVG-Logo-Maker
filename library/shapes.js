@@ -21,7 +21,7 @@ class Circle extends Shape{
 
 class Square extends Shape{
     render(){
-        return `<rect x="50" y="83" width="200" height="100" fill="${this.shapeColor}"/>`;
+        return `<rect x="50" y="66" width="200" height="100" fill="${this.shapeColor}"/>`;
     }
 }
 
