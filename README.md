@@ -20,11 +20,13 @@
   - [Questions](#questions)
 
   ## Installation 
-  - ```npm install inquirer@8.2.4```
-  - ```npm install --save-dev jest```
+   - ```npm install inquirer@8.2.4```
+   - ```npm install --save-dev jest```
 
   ## Usage
- To use the application, run ```node index.js``` on the command line.  You will then be prompted to answeer quetions in order to produce your SVG logo.  Click video below for demo of how the generator works.
+ To use the application, run the following command:
+  ```node index.js```  
+  You will then be prompted to answer questions in order to produce your SVG logo.  Click video below for demo of how the generator works.
   
  [![Watch the video](https://img.youtube.com/vi/mz9CE4IC_Uk<VIDEO_ID>)](https://youtu.be/mz9CE4IC_Uk<VIDEO_ID>)
 
@@ -32,7 +34,7 @@
 
 
   ## Credits
-  - David Gray GitHub grayd500
+  - David Gray (GitHub grayd500)
   - Xpert Learning Assistant
   - Bootcamp class
 
